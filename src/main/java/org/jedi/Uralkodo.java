@@ -32,6 +32,6 @@ public class Uralkodo implements IEroErzekeny, ISith{
     }
     @Override
     public void engeddElAHaragor() {
-        this.setGonoszsag() = (this.getGonoszsag() + 50);
+        this.setGonoszsag((this.getGonoszsag() + 50));
     }
 }

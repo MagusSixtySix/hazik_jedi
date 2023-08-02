@@ -36,10 +36,6 @@ public abstract class Jedi implements IEroErzekeny{
             return false;
         } else if (ellenfel instanceof Uralkodo || this.getEro() <= (ellenfel.mekkoraAzEreje() * 2)){
             return false;
-        } else if (this.getEro() <= ellenfel.mekkoraAzEreje()){
-            return false;
-        } else {
-            return true;
-        }
+        } else return !(this.getEro() <= ellenfel.mekkoraAzEreje());
     }
 }
