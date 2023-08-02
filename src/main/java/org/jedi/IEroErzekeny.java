@@ -5,4 +5,5 @@ public interface IEroErzekeny {
     float mekkoraAzEreje();
     boolean atallithato();
     void engeddElAHaragor ();
+    void printErtekek();
 }

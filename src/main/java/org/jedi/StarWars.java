@@ -12,7 +12,7 @@ public class StarWars {
         List<IEroErzekeny> szereplokLista = new ArrayList<>();
 
         try {
-            reader = new BufferedReader(new FileReader("starwars.txt"));
+            reader = new BufferedReader(new FileReader(filePath));
             String line = reader.readLine();
 
             while (line != null) {
@@ -21,7 +21,7 @@ public class StarWars {
                 } else if (line.equals("Uralkodó")){
                     szereplokLista.add(new Uralkodo());
                 } else {
-                    for (int i = 0; i < Integer.valueOf(line); i++){
+                    for (int i = 0; i < Integer.parseInt(line); i++){
                     szereplokLista.get(szereplokLista.size()-1).engeddElAHaragor();
                     }
                 }
