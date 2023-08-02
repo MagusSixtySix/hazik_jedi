@@ -14,27 +14,27 @@ public abstract class Jedi implements IEroErzekeny{
     public boolean getAtallhatE() {return this.atallhatE;}
     public void setAtallhatE(boolean atallhatE) {this.atallhatE = atallhatE;}
     public void printErtekek(){
-        if (this.atallhatE){
-            System.out.println("A Jedi ereje: " + this.ero + " és átállhat a sötét oldalra.");
+        if (this.getAtallhatE()){
+            System.out.println("A Jedi ereje: " + this.getEro() + " és átállhat a sötét oldalra.");
         } else {
-            System.out.println("A Jedi ereje: " + this.ero + " és nem állhat át a sötét oldalra.");
+            System.out.println("A Jedi ereje: " + this.getEro() + " és nem állhat át a sötét oldalra.");
         }
     }
 
     public abstract boolean megteremtiAzEgyensulyt();
     @Override
     public float mekkoraAzEreje() {
-        return this.ero;
+        return this.getEro();
     }
     @Override
     public boolean atallithato(){
-        return this.atallhatE;
+        return this.getAtallhatE();
     }
     @Override
     public boolean legyoziE(IEroErzekeny ellenfel){
         if (!ellenfel.atallithato()){
             return false;
-        } else if (this.ero <= ellenfel.mekkoraAzEreje()){
+        } else if (this.getEro() <= ellenfel.mekkoraAzEreje()){
             return false;
         } else {
             return true;
