@@ -25,6 +25,5 @@ public class AnakinSkywalker extends Jedi implements ISith{
     @Override
     public void printErtekek(){
             System.out.println("Anakin Skywalker ereje: " + this.getEro() + " és átállhat a sötét oldalra.");
-        }
     }
 }

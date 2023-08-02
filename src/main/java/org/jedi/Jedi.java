@@ -34,6 +34,8 @@ public abstract class Jedi implements IEroErzekeny{
     public boolean legyoziE(IEroErzekeny ellenfel){
         if (!ellenfel.atallithato()){
             return false;
+        } else if (ellenfel instanceof Uralkodo || this.getEro() <= (ellenfel.mekkoraAzEreje() * 2)){
+            return false;
         } else if (this.getEro() <= ellenfel.mekkoraAzEreje()){
             return false;
         } else {
